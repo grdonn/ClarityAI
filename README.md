@@ -1,67 +1,103 @@
-# ClarityAI
+# ClarityAI — Kanıt Defteri (Audit Trail) Odaklı Denetim Asistanı
 
-Denetim odaklı dosya inceleme ve onaylı düzeltme platformu.
+⚡ Denetim, onay ve rapor üretimini tek ekranda birleştiren pratik analiz platformu.
 
-## Neler yapar?
+![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2ea44f)
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-ff4b4b)
 
-- Kanıt Defteri: her adımı, kanıtı ve gerekçeyi kaydeder.
-- Kolon Eşleme: gerçek dünya CSV'leriyle hızlı uyum sağlar.
-- Onayla ve Uygula: otomatik öneri, insan onayı ile düzeltme.
-- PDF/CSV/JSON: rapor, issue listesi ve özet çıktılar üretir.
-- Offline/OpenAI: API anahtarı yoksa offline çalışır, opsiyonel LLM desteği sunar.
-- Demo mimarisi: Ticket ve e-Belge denetimi için eklenti yapısı.
+## 🔥 Neden farklı?
 
-## Ekran görüntüleri
+- **Kanıt Defteri odaklı:** Her adımı, kanıtı ve kararı kayıt altına alır.
+- **Onaylı düzeltme:** “Öneri üretir, onay olmadan uygulamaz.”
+- **Gerçek dosya uyumu:** Kolon eşleştirme + şema doğrulama ile sahaya hazır.
 
-Ekran görüntülerini `docs/screenshots/` altına koyabilirsiniz.
+## 🚀 1 Dakikada Demo
 
-- `docs/screenshots/home.png` (Ana Sayfa)
-- `docs/screenshots/run.png` (Yeni Çalıştırma + Eşleme)
-- `docs/screenshots/results.png` (Sonuçlar + Çıktılar)
-- `docs/screenshots/history.png` (Geçmiş + Kanıt Defteri)
+Yeni Çalıştırma → Demo seç → Dosya yükle/Örnek → Kolon eşleştir → Kontrolleri çalıştır → Sonuç indir → Onayla & Uygula
 
-## Kurulum
+## 🧾 Kanıt Defteri nedir?
+
+- Adım adım denetim kaydı oluşturur.
+- Karar + kanıt birlikte tutulur.
+- Uygulama öncesi onay mekanizması sağlar.
+
+## ✨ Özellikler
+
+- Kanıt Defteri (Audit Trail)
+- Kolon eşleştirme + şema doğrulama
+- PDF/CSV çıktıları
+- Offline/OpenAI opsiyonel kullanım
+- Plugin tabanlı mimari
+
+## 🖼️ Ekran Görüntüleri / GIF
+
+Görseller `docs/screenshots/` altına eklenecek.
+
+- `docs/screenshots/home.png`
+- `docs/screenshots/run.png`
+- `docs/screenshots/results.png`
+- `docs/screenshots/history.png`
+
+## 🧰 Kurulum
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+## ▶️ Çalıştırma
+
+```bash
 streamlit run app/Home.py
 ```
 
-## Kullanım
+Testler:
 
-### Demo 1: Talep / İade / İstek İncelemesi
+```bash
+python3 -m pytest -q
+```
 
-1) Ana Sayfa'da demo seçin.
-2) `tickets.csv` yükleyin veya örnek veri seçin.
-3) (Varsa) Kolon Eşleme yapın.
-4) Kontrolleri çalıştırın ve raporu indirin.
+## 🔐 OpenAI Anahtarı (Opsiyonel)
 
-### Demo 2: e-Belge Denetimi
+```bash
+cp .env.example .env
+```
 
-1) Ana Sayfa'da demo seçin.
-2) `invoices.csv`, `purchase_orders.csv`, `delivery_notes.csv` yükleyin.
-3) (Opsiyonel) Referans dosyalarını ekleyin.
-4) Kontrolleri çalıştırın ve issue/raporu indirin.
+`.env` içine:
 
-## OpenAI modu
+```
+OPENAI_API_KEY=your_key_here
+```
 
-- Varsayılan: Offline (API anahtarı yoksa otomatik).
-- Opsiyonel: OpenAI aktif etmek için Settings sayfasından toggle açın.
-- `.env` dosyasına `OPENAI_API_KEY` ekleyin.
+- Varsayılan mod: Offline
+- OpenAI, ayarlardan opsiyonel açılır.
+- **Güvenlik:** `.env` git’e girmez, anahtar asla repoya konmaz.
+- Deploy aşamasında secrets kullanılması önerilir.
 
-## Güvenlik notları
+## 📄 Veri Formatları
 
-- `.env` asla repoya eklenmez.
-- `runs/` klasörü lokaldir ve çalışma verilerini içerir.
+**Ticket Demo (zorunlu):**
+- `ticket_id`, `created_at`, `channel`, `customer_text`
+- Opsiyonel: `category`, `order_id`, `amount`
 
-## Mimari
+**e-Belge Demo:**
+- `invoices.csv`, `purchase_orders.csv`, `delivery_notes.csv`
+- Kolon eşleştirme ile farklı isimler desteklenir.
 
-- Kısa özet için: `docs/architecture.md`
+## 🧠 Mimari
 
-## Roadmap
+- `core/`: audit, schema, storage, LLM, engine
+- `plugins/`: demo kuralları ve çıktı üretimi
+- `app/`: Streamlit arayüzü
 
-- Basit deployment (Docker + tek komut yayın)
-- LLM provider seçimi ve yönetimi
-- Ek kurallar ve sektör bazlı kontrol paketleri
+Detay: `docs/architecture.md`
+
+## 📌 CV’ye yazmalık
+
+- Kanıt Defteri temelli denetim akışı ve onaylı düzeltme tasarımı
+- Pydantic şema doğrulama + kolon eşleştirme ile veri uyumluluğu
+- Streamlit tabanlı, rapor üreten, modüler plugin mimarisi
+
+Lisans: No license / all rights reserved
