@@ -6,6 +6,12 @@
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-ff4b4b)
 
+## 🚀 Canlı Demo
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://<your-app>.streamlit.app)
+
+https://<your-app>.streamlit.app
+
 ## 🔥 Neden farklı?
 
 - **Kanıt Defteri odaklı:** Her adımı, kanıtı ve kararı kayıt altına alır.
@@ -30,22 +36,14 @@ Yeni Çalıştırma → Demo seç → Dosya yükle/Örnek → Kolon eşleştir �
 - Offline/OpenAI opsiyonel kullanım
 - Plugin tabanlı mimari
 
-## 🖼️ Ekran Görüntüleri
+## 🖼️ Ekran Görüntüleri / GIF
 
-> Not: Görseller `docs/screenshots/` altında durur.
+Görseller `docs/screenshots/` altına eklenecek.
 
-### Ana Sayfa
-![Ana Sayfa](docs/screenshots/home.png)
-
-### Yeni Çalıştırma
-![Yeni Çalıştırma](docs/screenshots/run.png)
-
-### Sonuçlar
-![Sonuçlar](docs/screenshots/results.png)
-
-### Geçmiş
-![Geçmiş](docs/screenshots/history.png)
-
+- `docs/screenshots/home.png`
+- `docs/screenshots/run.png`
+- `docs/screenshots/results.png`
+- `docs/screenshots/history.png`
 
 ## 🧰 Kurulum
 
@@ -81,7 +79,7 @@ OPENAI_API_KEY=your_key_here
 
 - Varsayılan mod: Offline
 - OpenAI, ayarlardan opsiyonel açılır.
-- **Güvenlik:** `.env` git’e girmez, anahtar asla repoya konmaz.
+- **Güvenlik:** `.env` git'e girmez, anahtar asla repoya konmaz.
 - Deploy aşamasında secrets kullanılması önerilir.
 
 ## 📄 Veri Formatları
@@ -101,5 +99,27 @@ OPENAI_API_KEY=your_key_here
 - `app/`: Streamlit arayüzü
 
 Detay: `docs/architecture.md`
+
+## ☁️ Deploy (Streamlit Cloud)
+
+- **Main file path:** `app/Home.py`
+- **Secrets (TOML) örneği:**
+
+```
+OPENAI_API_KEY="..."
+OPENAI_MODEL="gpt-4o-mini"
+```
+
+- `.env` Streamlit Cloud'da kullanılmaz, secrets kullanılmalıdır.
+
+## 💾 Kalıcılık Notu
+
+Streamlit Cloud'da dosya sistemi kalıcı değildir; `runs/` geçmişi garanti edilmez.
+
+## 📌 CV’ye yazmalık
+
+- Kanıt Defteri temelli denetim akışı ve onaylı düzeltme tasarımı
+- Pydantic şema doğrulama + kolon eşleştirme ile veri uyumluluğu
+- Streamlit tabanlı, rapor üreten, modüler plugin mimarisi
 
 Lisans: No license / all rights reserved
