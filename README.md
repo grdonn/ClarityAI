@@ -30,14 +30,22 @@ Yeni Çalıştırma → Demo seç → Dosya yükle/Örnek → Kolon eşleştir �
 - Offline/OpenAI opsiyonel kullanım
 - Plugin tabanlı mimari
 
-## 🖼️ Ekran Görüntüleri / GIF
+## 🖼️ Ekran Görüntüleri
 
-Görseller `docs/screenshots/` altına eklenecek.
+> Not: Görseller `docs/screenshots/` altında durur.
 
-- `docs/screenshots/home.png`
-- `docs/screenshots/run.png`
-- `docs/screenshots/results.png`
-- `docs/screenshots/history.png`
+### Ana Sayfa
+![Ana Sayfa](docs/screenshots/home.png)
+
+### Yeni Çalıştırma
+![Yeni Çalıştırma](docs/screenshots/run.png)
+
+### Sonuçlar
+![Sonuçlar](docs/screenshots/results.png)
+
+### Geçmiş
+![Geçmiş](docs/screenshots/history.png)
+
 
 ## 🧰 Kurulum
 
