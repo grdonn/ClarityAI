@@ -1,0 +1,6 @@
+{
+  "max_rows": null,
+  "chunk_size": null,
+  "ttl_days": null,
+  "use_openai": true
+}

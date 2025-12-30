@@ -1,0 +1,11 @@
+ticket_id,created_at,channel,customer_text,category,order_id,amount
+TICK-001,2024-01-02,email,"I want a refund, this is urgent and about payment",,ORD-1001,1200
+TICK-002,2024-01-03,chat,"Delivery delayed, please help",delivery,ORD-1002,350
+TICK-003,2024-01-04,email,"Return request for my order",,ORD-1003,200
+TICK-004,2024-01-05,web,"Payment failed and I need help",payment,,
+TICK-005,2024-01-06,chat,"Where is my shipment",,ORD-1005,80
+TICK-006,2024-01-07,email,"Urgent: refund not received",,ORD-1006,900
+TICK-007,2024-01-08,web,"Question about product",general,,
+TICK-008,2024-01-09,chat,"Return and refund issue, urgent",,ORD-1008,1500
+TICK-009,2024-01-10,email,"Delivery note missing",delivery,ORD-1009,60
+TICK-010,2024-01-11,web,"Payment charge is incorrect",,ORD-1010,40
