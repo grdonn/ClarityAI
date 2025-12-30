@@ -102,10 +102,4 @@ OPENAI_API_KEY=your_key_here
 
 Detay: `docs/architecture.md`
 
-## 📌 CV’ye yazmalık
-
-- Kanıt Defteri temelli denetim akışı ve onaylı düzeltme tasarımı
-- Pydantic şema doğrulama + kolon eşleştirme ile veri uyumluluğu
-- Streamlit tabanlı, rapor üreten, modüler plugin mimarisi
-
 Lisans: No license / all rights reserved
