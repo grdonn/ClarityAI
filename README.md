@@ -1,6 +1,6 @@
-# ClarityAI — Kanıt Defteri (Audit Trail) Odaklı Denetim Asistanı
+# ClarityAI — Dosya/BELGE Analizi ve Onaylı Düzeltme Asistanı
 
-⚡ Denetim, onay ve rapor üretimini tek ekranda birleştiren pratik analiz platformu.
+CSV tabanlı müşteri talepleri ve e-Belgelerde otomatik kontrol, rapor ve düzeltme önerisi üretir.
 
 ![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2ea44f)
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
@@ -8,54 +8,46 @@
 
 ## 🚀 Canlı Demo
 
-👉 https://clarity-ai.streamlit.app/
-
-
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://<your-app>.streamlit.app)
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-success?style=for-the-badge)](https://clarity-ai.streamlit.app/)
+Demo linki: https://clarity-ai.streamlit.app/
 
+## ✅ Ürün Değeri (Neden Farklı?)
 
-## 🔥 Neden farklı?
+- **Ticket/Talep Demo:** eksik bilgi tespiti, önceliklendirme, yanıt taslağı (`reply_email.txt`), rapor (`report.pdf`).
+- **e-Belge Demo:** fatura-sipariş-irsaliye mutabakat kontrolleri, `issues.csv` + `report.pdf`, onay sonrası `corrected_invoices.csv`.
+- **Gerçek dosya uyumu:** kolon eşleştirme + şema doğrulama ile sahaya hazır.
 
-- **Kanıt Defteri odaklı:** Her adımı, kanıtı ve kararı kayıt altına alır.
-- **Onaylı düzeltme:** “Öneri üretir, onay olmadan uygulamaz.”
-- **Gerçek dosya uyumu:** Kolon eşleştirme + şema doğrulama ile sahaya hazır.
+## 📦 Ne üretir?
+
+**Ticket Demo:** `report.pdf`, `reply_email.txt`, (varsa) `summary.json`
+
+**e-Belge Demo:** `issues.csv`, `report.pdf`, `corrected_invoices.csv`, `summary.json`
+
+## 🧭 İzlenebilirlik
+
+İzlenebilirlik (Audit Trail): Her çalıştırmada kararlar, bulgular ve uygulanan düzeltmeler `audit.json` ile kayıt altına alınır.
 
 ## 🚀 1 Dakikada Demo
 
-Yeni Çalıştırma → Demo seç → Dosya yükle/Örnek → Kolon eşleştir → Kontrolleri çalıştır → Sonuç indir → Onayla & Uygula
+**Ticket Demo**
+- Yeni Çalıştırma → Ticket Demo seç
+- Dosya yükle/Örnek veri seç
+- Kolon eşleştir
+- Kontrolleri çalıştır → Sonuç indir
 
-## 🧾 Kanıt Defteri nedir?
+**e-Belge Demo**
+- Yeni Çalıştırma → e-Belge Demo seç
+- `invoices.csv`, `purchase_orders.csv`, `delivery_notes.csv` yükle
+- Kolon eşleştir
+- Kontrolleri çalıştır → Onayla & Uygula
 
-- Adım adım denetim kaydı oluşturur.
-- Karar + kanıt birlikte tutulur.
-- Uygulama öncesi onay mekanizması sağlar.
+## 🖼️ Ekran Görüntüleri / GIF
 
-## ✨ Özellikler
-
-- Kanıt Defteri (Audit Trail)
-- Kolon eşleştirme + şema doğrulama
-- PDF/CSV çıktıları
-- Offline/OpenAI opsiyonel kullanım
-- Plugin tabanlı mimari
-
-## 🖼️ Ekran Görüntüleri
-
-> Not: Görseller `docs/screenshots/` altında durur.
-
-### Ana Sayfa
 ![Ana Sayfa](docs/screenshots/home.png)
-
-### Yeni Çalıştırma
 ![Yeni Çalıştırma](docs/screenshots/run.png)
-
-### Sonuçlar
 ![Sonuçlar](docs/screenshots/results.png)
-
-### Geçmiş
 ![Geçmiş](docs/screenshots/history.png)
-
 
 ## 🧰 Kurulum
 
