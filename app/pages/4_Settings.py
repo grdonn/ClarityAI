@@ -1,3 +1,16 @@
+from pathlib import Path
+import sys
+
+_app_dir = Path(__file__).resolve()
+while _app_dir.name != "app" and _app_dir.parent != _app_dir:
+    _app_dir = _app_dir.parent
+if str(_app_dir) not in sys.path:
+    sys.path.insert(0, str(_app_dir))
+
+from boot import ensure_project_root_on_path
+
+ensure_project_root_on_path()
+
 import os
 
 import streamlit as st
